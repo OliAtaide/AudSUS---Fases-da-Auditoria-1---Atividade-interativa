@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    font-family: "Jost", sans-serif;
+}
+
+table {
+    background-color: #d1e7fd;
+}
+
+.table-container {
+    background-color: #d1e7fd;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+th {
+    border-bottom: 1px solid #0b486b;
+    font-size: 26px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+td {
+    padding: 24px;
+}
+
+td:has(.card-1),
+td:has(.card-2) {
+    width: 30%;
+}
+
+th:first-child,
+td:first-child {
+    border-right: 1px solid #0b486b;
+}
+
+.card {
+    height: 150px;
+}
+
+.card-1,
+.card-2 {
+    border: none !important;
+}
+
+.card-1 {
+    font-size: 20px;
+    z-index: 99;
+}
+
+.dragged {
+    width: calc(25% - 48px);
+    position: absolute;
+}
+
+.card-2 {
+    background-color: #82bdff;
+    position: relative;
+}
+
+.card-3 {
+    font-size: 18px;
+    border: 1px solid #0b486b;
+}
