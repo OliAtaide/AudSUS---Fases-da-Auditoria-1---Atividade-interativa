@@ -26,7 +26,7 @@ function printRows() {
     obj_tds.push(
       `
             <td>
-                <div class="card card-1 card-obj">
+                <div class="card card-1 card-obj" id="cardObj${i}" data-value="${i}">
                     <div class="card-body">
                         ${v}
                     </div>
@@ -39,18 +39,17 @@ function printRows() {
   obj_tds = obj_tds.sort(() => Math.random() - 0.5);
 
   questoes.forEach(function (v, i) {
-    console.log(obj_tds[i]);
     qst_tds.push(
       `
             <tr>
                 ${obj_tds[i]}
                 <td>
-                    <div class="card card-2 qst-slot">
+                    <div class="card card-2 qst-slot" data-value="" data-obj="">
 
                     </div>
                 </td>
                 <td>
-                    <div class="card card-3">
+                    <div class="card card-3" >
                         <div class="card-body">
                            ${v}
                         </div>
@@ -69,16 +68,64 @@ function printRows() {
     accept: ".card-obj",
     tolerance: "pointer",
     drop: function (event, ui) {
+      if (!$(this).hasClass("qst-slot-filled")) {
+        $(this).addClass("qst-slot-filled");
+        ui.draggable.addClass("card-obj-filled");
+      }
+
       let pos = $(this).offset();
 
       ui.draggable.addClass("dragged");
+
+      let id = ui.draggable.attr("id");
+      $(this).attr("data-obj", "#" + id);
+      $(this).attr("data-value", ui.draggable.data("value"));
 
       ui.draggable.css({
         top: pos.top + "px",
         left: pos.left + "px",
       });
     },
+
+    out: function (event, ui) {
+      if ($(this).hasClass("qst-slot-filled")) {
+        let drag_id = "#" + ui.draggable.attr("id");
+        let btn_id = $(this).data("obj");
+
+        if (drag_id == btn_id) {
+          $(this).removeClass("qst-slot-filled");
+          ui.draggable.removeClass("card-obj-filled");
+        }
+      }
+    },
   });
 }
 
 printRows();
+
+$("#verificar").click(function () {
+  let isComplete = $(".qst-slot-filled").length == questoes.length;
+
+  if (isComplete) {
+    let acertos = 0;
+
+    $(".qst-slot-filled").each(function (i) {
+      console.log($(this), i);
+      let r = $(this).data("value");
+
+      let isCorrect = r == i;
+      if (isCorrect) {
+        $(this).addClass("right");
+        acertos += 1;
+      } else {
+        $(this).addClass("wrong");
+      }
+    });
+
+    if (acertos == questoes.length) {
+      $("#rightModal").modal("show");
+    } else {
+      $("#wrongModal").modal("show");
+    }
+  }
+});

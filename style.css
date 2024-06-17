@@ -3,6 +3,16 @@
   font-family: "Jost", sans-serif;
 }
 
+.navbar,
+footer {
+  background-color: #f0f0f0 !important;
+}
+
+main .container {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
 table {
   background-color: #d1e7fd;
 }
@@ -61,4 +71,65 @@ td:first-child {
 .card-3 {
   font-size: 18px;
   border: 1px solid #0b486b;
+}
+
+footer {
+  padding: 24px;
+}
+
+#verificar {
+  background-color: #167cba;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+#rightModal .modal-dialog,
+#wrongModal .modal-dialog {
+  max-width: 540px !important;
+}
+#rightModal .modal-header,
+#wrongModal .modal-header {
+  font-weight: 600;
+  color: white;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+#rightModal .modal-content,
+#wrongModal .modal-content {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#rightModal .modal-title,
+#wrongModal .modal-title {
+  font-size: 26px !important;
+}
+#rightModal .modal-body,
+#wrongModal .modal-body {
+  font-size: 18px;
+}
+#rightModal .btn-close,
+#wrongModal .btn-close {
+  filter: invert(100%);
+}
+#rightModal .modal-title,
+#rightModal .btn-primary,
+#wrongModal .modal-title,
+#wrongModal .btn-primary {
+  font-weight: 500 !important;
+}
+
+#rightModal .modal-header {
+  background-color: #178545;
+}
+#rightModal .btn-primary {
+  background-color: #178545 !important;
+}
+
+#wrongModal .modal-header {
+  background-color: #dc3545;
+}
+#wrongModal .btn-primary {
+  background-color: #dc3545 !important;
 }/*# sourceMappingURL=style.css.map */

@@ -11,81 +11,144 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="container">
-            <div class="row w-100">
-                <div class="col">
-                    <p>
-                        <strong>Módulo:</strong> Fases da Auditoria Interna I
-                    </p>
-                    <p>
-                        <strong>Aula 03:</strong> Estratégia global de auditoria
-                    </p>
+    <header>
+        <div class="navbar">
+            <div class="container">
+                <div class="row w-100">
+                    <div class="col">
+                        <p>
+                            <strong>Módulo:</strong> Fases da Auditoria Interna I
+                        </p>
+                        <p>
+                            <strong>Aula 03:</strong> Estratégia global de auditoria
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>
+                            <strong>Unidade 1:</strong> Processo de planejar a atividade de auditoria interna
+                        </p>
+                        <p>
+                            <strong>Conteudistas:</strong> Caroline Maestri Nobre Albini e Rafael Hohenfeld Macedo dos
+                            Santos
+                        </p>
+                    </div>
                 </div>
-                <div class="col">
-                    <p>
-                        <strong>Unidade 1:</strong> Processo de planejar a atividade de auditoria interna
-                    </p>
-                    <p>
-                        <strong>Conteudistas:</strong> Caroline Maestri Nobre Albini e Rafael Hohenfeld Macedo dos
-                        Santos
-                    </p>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="container text-center">
+                <h6 class="text-center w-100">
+                    Atividade Interativa
+                </h6>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h5 class="mb-4">
+                Interligue as colunas 1 e 2, a coluna 1 se refere ao objetivo proposto e a coluna 2 as questões
+                propostas:
+            </h5>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                OBJETIVO DA AUDITORIA
+                            </th>
+                            <th colspan="2">
+                                QUESTÃO PROPOSTA
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <div class="card card-1">
+                                    <div class="card-body">
+                                        Verificar a regular utilização de DMIs em cirurgias de coluna vertebral pelos
+                                        prestadores do
+                                        SUS.
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="card card-2">
+
+                                </div>
+                            </td>
+                            <td>
+                                <div class="card card-3">
+                                    <div class="card-body">
+                                        Os estabelecimentos de saúde habilitados para a assistência de alta complexidade
+                                        em
+                                        oncologia têm respondido em tempo hábil a necessidade de tratamento dos
+                                        pacientes
+                                        diagnosticados com neoplasia maligna? 
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex justify-content-end mt-4">
+                <button type="button" id="verificar" class="btn btn-primary">
+                    Verificar
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="row">
+            <div class="col">
+                <img src="cc.svg" alt="">
+            </div>
+            <div class="col">
+                <img src="logos.svg" alt="">
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="rightModal" tabindex="-1" aria-labelledby="rightModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="rightModalLabel">
+                        <i class="bi bi-check"></i>
+                        Correto!
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Parabéns! todas as respostas estão corretas.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Concluir</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="navbar">
-        <div class="container text-center">
-            <h6 class="text-center w-100">
-                Atividade Interativa
-            </h6>
-        </div>
-    </div>
-    <div class="container">
-        <h6>
-            Interligue as colunas 1 e 2, a coluna 1 se refere ao objetivo proposto e a coluna 2 as questões propostas:
-        </h6>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            OBJETIVO DA AUDITORIA
-                        </th>
-                        <th colspan="2">
-                            QUESTÃO PROPOSTA
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <tr>
-                        <td>
-                            <div class="card card-1">
-                                <div class="card-body">
-                                    Verificar a regular utilização de DMIs em cirurgias de coluna vertebral pelos
-                                    prestadores do
-                                    SUS.
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="card card-2">
-
-                            </div>
-                        </td>
-                        <td>
-                            <div class="card card-3">
-                                <div class="card-body">
-                                    Os estabelecimentos de saúde habilitados para a assistência de alta complexidade em
-                                    oncologia têm respondido em tempo hábil a necessidade de tratamento dos pacientes
-                                    diagnosticados com neoplasia maligna? 
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="modal fade" id="wrongModal" tabindex="-1" aria-labelledby="wrongModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="wrongModalLabel">
+                        <i class="bi bi-x-circle"></i>
+                        Tente novamente
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Algumas respostas estão incorretas, tente novamente para concluir o módulo.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Concluir</button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
