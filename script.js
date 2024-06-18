@@ -75,6 +75,8 @@ function printRows() {
 
       let pos = $(this).offset();
 
+      let wdt = $(this).width();
+
       ui.draggable.addClass("dragged");
 
       let id = ui.draggable.attr("id");
@@ -84,6 +86,7 @@ function printRows() {
       ui.draggable.css({
         top: pos.top + "px",
         left: pos.left + "px",
+        width: wdt + "px"
       });
     },
 

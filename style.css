@@ -81,7 +81,7 @@ td:has(.card-3) {
 }
 
 .dragged {
-  width: calc(25% - 36px);
+  width: 100%;
   position: absolute;
 }
 
